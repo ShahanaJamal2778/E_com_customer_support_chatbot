@@ -1,0 +1,256 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Assalamualaikum", "Salam", "AoA", "Good morning", "Good evening", "Hi Jamal Cart", "Is anyone there?", "Hello there", "Hey Jamal Cart"],
+      "responses": [
+        "Assalamu Alaikum! \ud83c\udf38 I'm Shahana Jamal, your customer support assistant at Jamal Cart. How may I help you today?",
+        "Assalamu Alaikum! Welcome to Jamal Cart — I'm Shahana, here to help with anything you need.",
+        "Assalamu Alaikum! I'm Shahana Jamal from the Jamal Cart support team. What can I do for you today?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "Goodbye", "See you", "Allah Hafiz", "Take care", "See you later", "Khuda Hafiz", "No allah hafiz"],
+      "responses": [
+        "Allah Hafiz! Thank you for visiting Jamal Cart. Have a wonderful day!",
+        "Allah Hafiz! Hope to see you again soon.",
+        "Thank you for shopping with Jamal Cart. Take care!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "Thanks a lot", "Shukriya", "JazakAllah", "Thank you so much", "Ok thank you"],
+      "responses": ["You're welcome \ud83d\ude0a", "Happy to help!", "Anytime. Let me know if you need anything else."]
+    },
+    {
+      "tag": "show_products",
+      "patterns": ["Show products", "Show all products", "Display products", "Browse products", "Show me items", "What products do you have", "Product list"],
+      "responses": ["Sure! Let me fetch our latest products.", "Here are the available products.", "Loading our product catalog..."]
+    },
+    {
+      "tag": "search_product",
+      "patterns": ["Find shoes", "Search for earbuds", "Do you have watches", "Search products", "I need headphones", "Find hoodie", "Search Nike shoes", "I want to purchase a t shirt", "Looking for a jacket"],
+      "responses": ["Sure! Let me search our catalog.", "Searching products for you...", "Please wait while I find matching products."]
+    },
+    {
+      "tag": "search_by_category",
+      "patterns": ["Products in category electronics", "Show me category men", "Category women", "Filter by category", "Products from a category"],
+      "responses": ["Let me pull up that category for you.", "Searching that category now."]
+    },
+    {
+      "tag": "search_by_price",
+      "patterns": ["Products under 3000", "Shoes below 4000", "Show products under 5000", "Budget products", "Cheap electronics", "Affordable products"],
+      "responses": ["Sure! Let me find products in your budget.", "Searching products within your price range."]
+    },
+    {
+      "tag": "product_details",
+      "patterns": ["Tell me about this product", "Product details", "Describe this item", "Show product information", "Specifications"],
+      "responses": ["Sure! Let me fetch the product details.", "Loading complete product information."]
+    },
+    {
+      "tag": "check_stock",
+      "patterns": ["Is this in stock", "Do you have this in stock", "Check stock for this product", "How many left in stock", "Availability of this item", "Is it currently available", "Current stock of this product"],
+      "responses": ["Let me check the current stock for you.", "Checking availability now."]
+    },
+    {
+      "tag": "best_sellers",
+      "patterns": ["Best sellers", "Most popular products", "Top selling items", "What sells the most", "Trending products"],
+      "responses": ["Here are our best sellers.", "These are flying off the shelves!"]
+    },
+    {
+      "tag": "new_arrivals",
+      "patterns": ["New arrivals", "Latest products", "What's new", "Recently added items", "New stock"],
+      "responses": ["Here's what's new in store.", "Check out our latest arrivals."]
+    },
+    {
+      "tag": "men_products",
+      "patterns": ["Show men's products", "Men collection", "Men shirts", "Men shoes", "Men category", "Latest men collection", "Popular men dresses"],
+      "responses": ["Sure! Here are our men's products."]
+    },
+    {
+      "tag": "women_products",
+      "patterns": ["Women's collection", "Ladies products", "Women dresses", "Women handbags", "Show women's items", "Latest women collection"],
+      "responses": ["Here are our latest women's products."]
+    },
+    {
+      "tag": "kids_products",
+      "patterns": ["Kids products", "Children clothes", "Kids shoes", "Kids toys", "School bags", "Find a kids product"],
+      "responses": ["Here are products for kids."]
+    },
+    {
+      "tag": "electronics",
+      "patterns": ["Electronics", "Show gadgets", "Earbuds", "Headphones", "Smart watches", "Mouse", "Keyboard"],
+      "responses": ["Here are our electronics products."]
+    },
+    {
+      "tag": "add_to_cart",
+      "patterns": ["Add this to cart", "Add product", "Put this in my cart", "I want to buy this", "Add item", "Add this into cart", "Please add this to my bag", "Ok add into my cart"],
+      "responses": ["Sure! Adding the product to your cart."]
+    },
+    {
+      "tag": "remove_from_cart",
+      "patterns": ["Remove from cart", "Delete this item", "Remove product", "Delete from my cart"],
+      "responses": ["Removing the item from your cart."]
+    },
+    {
+      "tag": "show_cart",
+      "patterns": ["Show my cart", "View cart", "Cart items", "Shopping cart", "What is in my cart", "Show cart"],
+      "responses": ["Here is your shopping cart."]
+    },
+    {
+      "tag": "checkout",
+      "patterns": ["Checkout", "Place order", "Complete purchase", "Buy now", "Proceed to payment"],
+      "responses": ["Let's proceed to checkout."]
+    },
+    {
+      "tag": "track_order",
+      "patterns": ["Track my order", "Where is my order", "Order status", "Track order", "When am I going to receive my order", "How long does it take to deliver the order", "Any update on my delivery", "Shipment status", "When will I get my order"],
+      "responses": ["Checking your order status."]
+    },
+    {
+      "tag": "cancel_order",
+      "patterns": ["Cancel my order", "Cancel order", "I don't want this order", "Stop my order"],
+      "responses": ["Sure! Let me process your cancellation request."]
+    },
+    {
+      "tag": "order_history",
+      "patterns": ["My past orders", "Order history", "Show my orders", "Previous orders", "List my orders", "I don't know order id", "I don't know the order number"],
+      "responses": ["Here's your order history."]
+    },
+    {
+      "tag": "refund_order",
+      "patterns": ["Refund my order", "I want a refund", "Process my refund", "Refund this order", "I need my money back for this order", "Request a refund"],
+      "responses": ["Let me process that refund for you."]
+    },
+    {
+      "tag": "update_shipping_address",
+      "patterns": ["Update my address", "Change address", "Edit shipping address", "New delivery address", "I want to change my address", "Can you update my address"],
+      "responses": ["Sure! Please enter your new shipping address."]
+    },
+    {
+      "tag": "wishlist_add",
+      "patterns": ["Add to wishlist", "Save for later", "Add this to my wishlist", "Wishlist this item"],
+      "responses": ["Adding that to your wishlist."]
+    },
+    {
+      "tag": "show_wishlist",
+      "patterns": ["Show my wishlist", "View wishlist", "My saved items", "What's in my wishlist"],
+      "responses": ["Here's your wishlist."]
+    },
+    {
+      "tag": "payment_methods",
+      "patterns": ["Payment methods", "How can I pay", "Do you accept JazzCash", "Cash on delivery", "Payment options", "What payment methods are acceptable"],
+      "responses": ["We accept Cash on Delivery, JazzCash, EasyPaisa, Bank Transfer, and Card."]
+    },
+    {
+      "tag": "payment_failed",
+      "patterns": ["My payment failed", "Payment did not go through", "Payment declined", "My card was charged but order not placed", "Transaction failed", "Payment error at checkout"],
+      "responses": ["I'm sorry your payment didn't go through."]
+    },
+    {
+      "tag": "shipping_policy",
+      "patterns": ["Shipping policy", "Delivery charges", "Delivery time", "Shipping information", "How long is delivery", "What are your delivery charges"],
+      "responses": ["We deliver all over Pakistan. Delivery takes 2\u20135 working days."]
+    },
+    {
+      "tag": "ship_international",
+      "patterns": ["Do you ship outside Pakistan", "International shipping", "Do you deliver abroad", "Can I order from another country", "Do you ship worldwide"],
+      "responses": ["Currently, Jamal Cart only ships within Pakistan. We hope to expand internationally soon — thanks for your interest!"]
+    },
+    {
+      "tag": "shipping_cost_complaint",
+      "patterns": ["Shipping cost is too high", "Delivery charges are expensive", "Why is shipping so costly", "Cant afford the shipping fee", "Reduce delivery charges"],
+      "responses": ["I understand shipping costs can add up."]
+    },
+    {
+      "tag": "checkout_trouble",
+      "patterns": ["I cant complete my order", "Checkout is not working", "I am stuck at checkout", "Order not going through", "Cant place my order", "Checkout page is stuck"],
+      "responses": ["Let's troubleshoot your checkout together."]
+    },
+    {
+      "tag": "refund_policy",
+      "patterns": ["Refund policy", "Return product", "Money back", "Refund", "Exchange product"],
+      "responses": ["Products can be returned within 7 days if unused and in original packaging."]
+    },
+    {
+      "tag": "delayed_order",
+      "patterns": ["My order is delayed", "Order taking too long", "Why is my order late", "Order still not delivered", "It's been days and no delivery"],
+      "responses": ["I'm sorry your order is taking longer than expected."]
+    },
+    {
+      "tag": "wrong_item",
+      "patterns": ["I received the wrong item", "Wrong product delivered", "This is not what I ordered", "I got a different item", "Incorrect item received"],
+      "responses": ["I'm really sorry you received the wrong item."]
+    },
+    {
+      "tag": "damaged_product",
+      "patterns": ["My product arrived damaged", "The item is broken", "I received a damaged product", "Product came in bad condition", "Item is defective on arrival"],
+      "responses": ["I'm sorry to hear your product arrived damaged."]
+    },
+    {
+      "tag": "warranty_claim",
+      "patterns": ["I want to claim warranty", "This product has a warranty issue", "Warranty claim", "My product stopped working under warranty", "How do I claim warranty"],
+      "responses": ["Let's get your warranty claim started."]
+    },
+    {
+      "tag": "coupon_issue",
+      "patterns": ["My coupon is not working", "Coupon code invalid", "Discount code not applying", "Promo code error", "Coupon not accepted"],
+      "responses": ["Let's sort out that coupon issue."]
+    },
+    {
+      "tag": "apply_coupon",
+      "patterns": ["Apply coupon SUMMER20", "Use code WELCOME10", "Apply my discount code", "Can you apply this coupon", "Apply promo code to my cart"],
+      "responses": ["Sure, let me apply that to your cart total."]
+    },
+    {
+      "tag": "discounts",
+      "patterns": ["Discounts", "Today's deals", "Offers", "Sale", "Promo", "Tell me about your discount policy", "I need some discount", "14 august deal", "Independence day sale", "Any coupon available"],
+      "responses": [
+        "\ud83c\udf89 We have a special 14th August Independence Day Sale running right now! Use SUMMER20, EID15, FLASH25 or WELCOME10 (first-time customers) at checkout — tell me which code and I'll calculate your discounted total instantly."
+      ]
+    },
+    {
+      "tag": "membership_offer",
+      "patterns": ["Do you have a membership program", "Is there a loyalty program", "Membership benefits", "VIP membership", "Do you offer subscriptions"],
+      "responses": ["We don't have a paid membership program yet, but we're working on a loyalty rewards program — stay tuned for updates!"]
+    },
+    {
+      "tag": "feedback",
+      "patterns": ["I want to give feedback", "I have a suggestion", "Feedback about your service", "I want to rate my experience", "Here is my feedback", "This app could be better"],
+      "responses": ["Thank you so much for sharing your feedback — it genuinely helps us improve."]
+    },
+    {
+      "tag": "data_privacy_policy",
+      "patterns": ["What do you do with my data", "Data privacy policy", "Is my information safe", "How do you use my personal data", "Do you share my data with others"],
+      "responses": ["We only use your data (name, contact, address, order history) to process your orders and improve your shopping experience. We never sell your personal information to third parties."]
+    },
+    {
+      "tag": "forgot_password",
+      "patterns": ["I forgot my password", "Cant remember my password", "Reset my password", "How do I reset my password", "Forgot password guide", "Password reset help"],
+      "responses": ["No worries! Click 'Forgot Password' on the login page, enter your registered email, and we'll send you a reset link. If it doesn't arrive within 10 minutes, please check your spam folder."]
+    },
+    {
+      "tag": "account_locked",
+      "patterns": ["My account is locked", "I cant log into my account", "Account suspended", "Why is my account blocked", "Locked out of my account"],
+      "responses": ["I'm sorry you're locked out."]
+    },
+    {
+      "tag": "complaint_general",
+      "patterns": ["This is unacceptable", "I am very unhappy with this service", "This is the worst experience", "I am extremely disappointed", "Your service is terrible", "I am so frustrated", "This bot is useless", "Nobody is helping me"],
+      "responses": ["I'm really sorry you're having this experience — that's not the standard we want for Jamal Cart."]
+    },
+    {
+      "tag": "contact",
+      "patterns": ["Contact", "Customer support", "Phone number", "Email address", "Help center", "How can I contact with you", "I need your customer support email"],
+      "responses": ["You can contact Jamal Cart at support@jamalcart.com or call 0300-1234567."]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [],
+      "responses": [
+        "Kindly note, I don't have a confident answer for that. I've forwarded your query to our senior support manager, and they'll call you or email you back within the next 3 business days to sort it out. Thank you for your patience!"
+      ]
+    }
+  ]
+}

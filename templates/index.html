@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jamal Cart — Shop with your AI assistant</title>
+<meta name="description" content="Jamal Cart: browse, chat, and check out with an AI shopping assistant." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+<!-- ============================= HEADER ============================= -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/" aria-label="Jamal Cart home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 44 44" width="34" height="34">
+          <circle class="mark-ring" cx="22" cy="22" r="19" fill="none" stroke-width="1.4"/>
+          <circle class="mark-ring mark-ring--dash" cx="22" cy="22" r="19" fill="none" stroke-width="1.4" stroke-dasharray="2.5 5"/>
+          <text x="22" y="30" text-anchor="middle" class="mark-letter">J</text>
+        </svg>
+      </span>
+      <span class="brand-word">Jamal Cart</span>
+    </a>
+
+    <nav class="category-nav" aria-label="Product categories">
+      <button class="cat-pill is-active" data-category="">All</button>
+      <button class="cat-pill" data-category="Men">Men</button>
+      <button class="cat-pill" data-category="Women">Women</button>
+      <button class="cat-pill" data-category="Kids">Kids</button>
+      <button class="cat-pill" data-category="Electronics">Electronics</button>
+    </nav>
+
+    <div class="header-actions">
+      <div class="search-box">
+        <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6.2" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="13.2" y1="13.2" x2="18" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <input type="text" id="search-input" placeholder="Search products…" aria-label="Search products" />
+      </div>
+
+      <button class="icon-btn" id="wishlist-btn" title="Wishlist" aria-label="Open wishlist">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 20.5s-8-5-8-11.2C4 5.8 6.2 4 8.7 4c1.6 0 3 .8 3.3 2 .3-1.2 1.7-2 3.3-2C17.8 4 20 5.8 20 9.3c0 6.2-8 11.2-8 11.2Z"/></svg>
+      </button>
+
+      <button class="icon-btn" id="cart-btn" title="Cart" aria-label="Open cart">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4 6h2l1.6 10.2A2 2 0 0 0 9.6 18h8a2 2 0 0 0 2-1.7L21 8H7"/><circle cx="10" cy="21" r="1.4" fill="currentColor"/><circle cx="18" cy="21" r="1.4" fill="currentColor"/></svg>
+        <span class="badge" id="cart-count">0</span>
+      </button>
+
+      <button class="account-btn" id="account-btn">Log in</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================= HERO STRIP ============================= -->
+<section class="hero-strip">
+  <div class="hero-inner">
+    <p class="eyebrow">Assalamu Alaikum — welcome to Jamal Cart</p>
+    <h1>Tell the assistant what you need.<br>It'll find it, cart it, track it.</h1>
+    <p class="hero-sub">Ask in plain words — "show me electronics under 5000" or "track order 12" — and let the assistant do the browsing.</p>
+    <button class="hero-cta" id="hero-chat-cta">Start chatting →</button>
+  </div>
+</section>
+
+<!-- ============================= MAIN LAYOUT ============================= -->
+<main class="app-shell">
+
+  <!-- Product grid -->
+  <section class="catalog" aria-label="Product catalog">
+    <div class="catalog-head">
+      <h2 id="catalog-title">All products</h2>
+      <span class="catalog-count" id="catalog-count"></span>
+    </div>
+    <div class="product-grid" id="product-grid">
+      <!-- product cards injected by app.js -->
+    </div>
+    <p class="empty-state" id="catalog-empty" hidden>No products found. Try a different search or category.</p>
+  </section>
+
+  <!-- Chat panel (desktop: docked; mobile: bottom sheet) -->
+  <aside class="chat-panel" id="chat-panel">
+    <div class="chat-head">
+      <span class="chat-avatar">
+        <svg viewBox="0 0 40 40" width="30" height="30">
+          <circle cx="20" cy="20" r="17" fill="none" stroke="var(--jade)" stroke-width="1.4"/>
+          <circle class="pulse-ring" cx="20" cy="20" r="17" fill="none" stroke="var(--jade)" stroke-width="1.4"/>
+          <text x="20" y="27" text-anchor="middle" class="chat-avatar-letter">J</text>
+        </svg>
+      </span>
+      <div>
+        <p class="chat-title">Jamal Assistant</p>
+        <p class="chat-status" id="chat-status">Online</p>
+      </div>
+      <button class="chat-close" id="chat-close" aria-label="Close chat">✕</button>
+    </div>
+
+    <div class="chat-messages" id="chat-messages">
+      <div class="msg msg--bot">
+        <div class="msg-bubble">Assalamu Alaikum! 🌸 I'm your Jamal Cart shopping assistant. Ask me to find products, check an order, or update your address.</div>
+      </div>
+    </div>
+
+    <div class="chat-typing" id="chat-typing" hidden>
+      <span></span><span></span><span></span>
+    </div>
+
+    <form class="chat-input-row" id="chat-form">
+      <input type="text" id="chat-input" placeholder="Type a message…" autocomplete="off" aria-label="Chat message" />
+      <button type="submit" class="chat-send" aria-label="Send message">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M3 11.5 21 3l-6.5 18-3.2-7.3L3 11.5Z"/></svg>
+      </button>
+    </form>
+  </aside>
+
+  <button class="chat-fab" id="chat-fab" aria-label="Open chat assistant">
+    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M4 4h16v12H8l-4 4V4Z"/></svg>
+  </button>
+</main>
+
+<!-- ============================= CART DRAWER ============================= -->
+<div class="drawer-overlay" id="cart-overlay"></div>
+<aside class="drawer" id="cart-drawer">
+  <div class="drawer-head">
+    <h3>Your Cart</h3>
+    <button class="drawer-close" id="cart-close" aria-label="Close cart">✕</button>
+  </div>
+  <div class="drawer-body" id="cart-body">
+    <p class="empty-state">Your cart is empty.</p>
+  </div>
+  <div class="drawer-footer" id="cart-footer" hidden>
+    <div class="cart-total-row">
+      <span>Total</span>
+      <span id="cart-total-value">0 PKR</span>
+    </div>
+    <input type="text" id="checkout-address" placeholder="Shipping address" />
+    <button class="checkout-btn" id="checkout-btn">Checkout</button>
+  </div>
+</aside>
+
+<!-- ============================= AUTH MODAL ============================= -->
+<div class="drawer-overlay" id="auth-overlay"></div>
+<div class="auth-modal" id="auth-modal">
+  <button class="drawer-close" id="auth-close" aria-label="Close">✕</button>
+  <div class="auth-tabs">
+    <button class="auth-tab is-active" data-tab="login">Log in</button>
+    <button class="auth-tab" data-tab="register">Register</button>
+  </div>
+
+  <form class="auth-form" id="login-form">
+    <label>Email<input type="email" id="login-email" required /></label>
+    <label>Password<input type="password" id="login-password" required minlength="6" /></label>
+    <button type="submit" class="auth-submit">Log in</button>
+    <p class="auth-msg" id="login-msg"></p>
+  </form>
+
+  <form class="auth-form" id="register-form" hidden>
+    <label>Full name<input type="text" id="register-name" required /></label>
+    <label>Email<input type="email" id="register-email" required /></label>
+    <label>Phone<input type="text" id="register-phone" /></label>
+    <label>Password<input type="password" id="register-password" required minlength="6" /></label>
+    <button type="submit" class="auth-submit">Create account</button>
+    <p class="auth-msg" id="register-msg"></p>
+  </form>
+</div>
+
+<!-- ============================= TOAST ============================= -->
+<div class="toast" id="toast"></div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>
